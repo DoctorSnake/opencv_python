@@ -1,1 +1,4 @@
 *.pyc
+old
+tmp
+*.mp4v

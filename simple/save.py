@@ -7,11 +7,12 @@ img_height = 240
 
 # Source: 0 - built in camera  1 - USB attached camera
 cap = cv2.VideoCapture(1)
-ret = cap.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH ,img_width)
-ret = cap.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT,img_height)
+ret = cap.set(3,img_width)
+ret = cap.set(4,img_height)
 
 # create a video writer to same images
-mpg4 = cv2.cv.CV_FOURCC('m', 'p', '4', 'v')
+#mpg4 = cv2.cv.CV_FOURCC('m', 'p', '4', 'v')
+mpg4 = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 out = cv2.VideoWriter()
 out.open("output.mp4v",mpg4, 20.0, (img_width,img_height))
 font = cv2.FONT_HERSHEY_SIMPLEX
